@@ -1,5 +1,7 @@
 import fetch from "node-fetch";
 const url = `https://jsonplaceholder.typicode.com/todos`;
+import EventEmitter from "events";
+import { Module } from "module";
 
 export const data = async () => {
   let getting = await fetch(url);
@@ -7,17 +9,11 @@ export const data = async () => {
   return getJson;
 };
 
-// data();
-// data().then((res) => console.log(res));
-// const some = data().then((res) => {
-//   let count = 1;
-//   res.forEach((element) => {
-//     if (count <= 5) {
-//       console.log(element);
-//     }
-//     count++;
-//   });
-// });
-// console.log(some);
-
-// module.exports.get = data;
+// creating class for binding both of the object
+export class Logger extends EventEmitter {
+  log(message) {
+    console.log(`${message}, got it`);
+    this.emit("messageLogged", { id: 1, message: "Finally" });
+  }
+}
+// Module.exports = Logger;
