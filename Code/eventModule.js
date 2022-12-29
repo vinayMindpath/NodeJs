@@ -12,3 +12,4 @@ emitter.on("messageLogged", (arg) => {
 
 // raising an event
 emitter.emit("messageLogged", { id: 2, message: "Got it." });
+console.log("emited");
