@@ -4,16 +4,8 @@ import { data } from "./logger.js";
 try {
   const server = http.createServer((req, respond) => {
     if (req.url === "/") {
-      data().then((res) => {
-        let count = 1;
-        res.forEach((element) => {
-          if (count <= 5) {
-            respond.write(element);
-            console.log(element);
-          }
-          count++;
-        });
-      });
+      console.log("responding");
+      respond.end();
     }
     if (req.url === "/api/courses") {
       console.log("doing JSON thing");
