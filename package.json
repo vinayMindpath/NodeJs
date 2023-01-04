@@ -11,9 +11,9 @@
     "node-fetch": "^3.3.0",
     "npm": "^9.2.0",
     "nvm": "^0.0.4",
-    "path": "^0.12.7",
     "web-streams-polyfill": "^3.2.1"
   },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
