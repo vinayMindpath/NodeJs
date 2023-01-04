@@ -4,7 +4,7 @@ import { CreateFile } from "./writeFile.js";
 import { join } from "path";
 import { cwd } from "process";
 // varible that stores file name, content of the file.
-const fileName = "content2.txt";
+const fileName = "content1.txt";
 const contentOfFile = "This is my second created file. Content got updated";
 
 // creating file first
